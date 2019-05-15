@@ -53,7 +53,7 @@ function isPathMatchesAlias (path, alias) {
   // Matching /^alias(\/|$)/
   if (path.indexOf(alias) === 0) {
     if (path.length === alias.length) return true
-    if (path[alias.length] === '/') return true
+    if (path[alias.length] === '/' || path[alias.length] === '\\') return true
   }
 
   return false
